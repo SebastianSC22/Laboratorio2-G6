@@ -133,6 +133,10 @@ def load_books_tags(catalog, filename):
     :rtype: int
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
+    catalog = catalog["model"]
+    booksfile = os.path.join(cf.data_dir, filename)
+    catalog = model.addBooktags(catalog, booksfile)
+    return model.bookTagSize(catalog)
     pass
 
 
@@ -167,6 +171,8 @@ def add_book_tags_file(catalog, booktagsfile):
     :rtype: dict
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
+    catalog["book_tags"] = set.new_set()
+    return catalog 
     pass
 
 
@@ -175,6 +181,8 @@ def create_book_tag_list(catalog):
     Esta funcion crea una lista vacia para booktags.
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
+    catalog["books_tags"] = set.new_set()
+    return catalog
     pass
 
 
@@ -191,6 +199,8 @@ def add_book_tag(catalog, booktag):
     :rtype: dict
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
+    set.add_element(catalog["book_tags"], booktag)
+    return catalog
     pass
 
 
