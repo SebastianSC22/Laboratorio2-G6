@@ -145,7 +145,8 @@ def main():
             print("Total de libros cargados: " + str(books) + "\n")
 
             # TODO: Mods de Est-1 en el Lab 2
-            first = None
+            first = logic.first_book(app)
+            print("Primer libro cargado:\n"+ str(first)+"\n")
 
             # TODO: Mods de Est-2 en el Lab 2
             last = None
