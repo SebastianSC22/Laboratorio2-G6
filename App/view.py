@@ -144,7 +144,7 @@ def main():
 
             # TODO: Mods de Est-2 en el Lab 2
             last = logic.last_book(app)
-            print("Ultimo libro cargado: \n" + styr(last) + "\n")
+            print("Ultimo libro cargado: \n" + str(last) + "\n")
 
         elif int(inputs[0]) == 2:
             print("Cargando información de tags....")
